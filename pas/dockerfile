@@ -1,4 +1,6 @@
 FROM nginx:alpine
-COPY pas.html /usr/share/nginx/html
+WORKDIR /app
+COPY . /app
 EXPOSE 80
+ENV NAME World
 CMD ["nginx", "-g", "daemon off;"]
