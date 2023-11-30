@@ -1,14 +1,9 @@
-FROM nginx:alpine
+# Gunakan image base yang diinginkan
+FROM nginx
 
-# Mengganti port default dari Nginx ke 8080
-RUN sed -i -e 's/80/8080/g' /etc/nginx/conf.d/default.conf
+# Copy file atau direktori dari host ke dalam image
+COPY . /usr/share/nginx/html
 
-# Menyalin seluruh konten dari direktori saat ini ke dalam direktori /app di dalam container
-COPY . /app
-
-# Menetapkan variabel lingkungan
-ENV NAME World
-
-# Menjalankan Nginx pada port 8080 ketika container dijalankan
-CMD ["nginx", "-g", "daemon off;"]
+# Tentukan port yang akan diexpose oleh container
+EXPOSE 80
 
