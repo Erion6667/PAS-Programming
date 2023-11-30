@@ -4,10 +4,13 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 # Menyalin file pas.html dari direktori lokal ke dalam direktori /usr/share/nginx/html di dalam container
-COPY pas.html /app/
+COPY pas.html/. .
 
 # Menetapkan variabel lingkungan
 ENV NAME World
+
+# Menambahkan perintah EXPOSE
+EXPOSE 80
 
 # Memulai server Nginx ketika container dijalankan
 CMD ["nginx", "-g", "daemon off;"]
