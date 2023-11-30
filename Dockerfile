@@ -10,5 +10,5 @@ COPY . /app
 ENV NAME World
 
 # Menjalankan Nginx pada port 8080 ketika container dijalankan
-CMD ["nginx", "-g", "80:8080"]
+CMD ["nginx", "-g", "80:8081"]
 
