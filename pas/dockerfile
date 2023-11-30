@@ -1,10 +1,10 @@
 FROM nginx:alpine
 
 # Menentukan direktori kerja di dalam container
-WORKDIR /app
+WORKDIR /usr/share/nginx/html
 
-# Menyalin seluruh konten dari direktori saat ini ke dalam direktori /app di dalam container
-COPY . /app/
+# Menyalin file pas.html dari direktori lokal ke dalam direktori /usr/share/nginx/html di dalam container
+COPY pas.html .
 
 # Menetapkan variabel lingkungan
 ENV NAME World
