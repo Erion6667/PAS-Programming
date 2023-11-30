@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: erion667/paspemograman3:v3.0
+          tags: erion667/paspemograman3:v3.1
