@@ -1,14 +1,6 @@
 FROM nginx:alpine
-
-# Menentukan direktori kerja di dalam container
-WORKDIR /usr/share/nginx/html
-
-# Menyalin file pas.html dari direktori lokal ke dalam direktori /usr/share/nginx/html di dalam container
-COPY pas.html .
-
-# Menetapkan port yang akan di-Expose oleh container
+WORKDIR /app
+COPY . /app
 EXPOSE 80
-
-# Menjalankan perintah untuk memulai server Nginx
+ENV NAME World
 CMD ["nginx", "-g", "daemon off;"]
-
