@@ -22,6 +22,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./pas/Dockerfile
+          file: ./pas
           push: true
           tags: erion667/paspemograman3:latest
