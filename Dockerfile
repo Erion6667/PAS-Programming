@@ -4,7 +4,7 @@ FROM nginx:alpine
 RUN sed -i -e 's/80/8080/g' /etc/nginx/conf.d/default.conf
 
 # Menyalin seluruh konten dari direktori saat ini ke dalam direktori /usr/share/nginx/html di dalam container
-COPY pas.html /usr/share/nginx/html/
+COPY pas.html 
 
 # Menetapkan variabel lingkungan
 ENV NAME World
