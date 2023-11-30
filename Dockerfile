@@ -1,6 +1,6 @@
 FROM nginx:alpine
 WORKDIR /app
 COPY . /app
-EXPOSE 8080
+EXPOSE 80
 ENV NAME World
-CMD ["nginx", "-g", "8080"]
+CMD ["nginx", "-g", "daemon off;"]
