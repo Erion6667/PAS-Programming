@@ -9,4 +9,8 @@ ENV NAME World
 # Expose port 8080 untuk dihubungkan dengan port 80 dari luar kontainer
 EXPOSE 8080
 
+# Menjalankan Nginx pada port 80 ketika container dijalankan
+CMD ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf", "-p", "/usr/share/nginx/html/", "-g", "listen 80;"]
+
+
 
