@@ -4,7 +4,7 @@ FROM nginx:alpine
 WORKDIR /app
 
 # Menyalin seluruh konten dari direktori saat ini ke dalam direktori /app di dalam container
-COPY pas.html /app/
+COPY . /app/
 
 # Menetapkan variabel lingkungan
 ENV NAME World
