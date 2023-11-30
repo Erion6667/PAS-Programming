@@ -1,5 +1,13 @@
 FROM nginx:alpine
+
+# Menentukan direktori kerja di dalam container
 WORKDIR /app
-COPY pas/. /app
+
+# Menyalin seluruh konten dari direktori saat ini ke dalam direktori /app di dalam container
+COPY pas.html /app/
+
+# Menetapkan variabel lingkungan
 ENV NAME World
+
+# Memulai server Nginx ketika container dijalankan
 CMD ["nginx", "-g", "daemon off;"]
