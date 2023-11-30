@@ -1,7 +1,7 @@
 FROM nginx:alpine
 
 # Menyalin file index.html ke dalam direktori default Nginx
-COPY index.html /usr/share/nginx/html/
+COPY pas.html /usr/share/nginx/html/
 
 # Menetapkan variabel lingkungan
 ENV NAME World
