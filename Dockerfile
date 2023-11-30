@@ -1,6 +1,6 @@
 FROM nginx:alpine
 WORKDIR /app
-COPY . /app
+COPY pas.html /app/
 EXPOSE 80
 ENV NAME World
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "pas.html"]
